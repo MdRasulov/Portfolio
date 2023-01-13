@@ -1,12 +1,14 @@
 import React from 'react';
-import bannerImg from '../../assets/banner.png';
+import bannerImg from '../../assets/images/banner.png';
 import './hero.scss';
 
 const Hero = () => {
    return (
       <div className='hero'>
          <div className='intro'>
-            <div className='welocome'>Welcome to my Portfolio</div>
+            <div className='welocome'>
+               <h1>Welcome to my Portfolio</h1>
+            </div>
             <div className='typing_text'>Hello! I'm Makhmud, Web Developer</div>
             <div className='description'>
                <p>
