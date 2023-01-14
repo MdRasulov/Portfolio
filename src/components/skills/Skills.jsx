@@ -12,7 +12,6 @@ import './skills.scss';
 function Skills() {
    const SPLIDE_PROPS = {
       arrows: false,
-      // pagination: false,
       type: 'loop',
       perPage: 3,
       perMove: 1,
@@ -24,7 +23,7 @@ function Skills() {
       gap: '1rem',
       heightRatio: 0.25,
       autoplay: true,
-      interval: 3000,
+      interval: 2500,
       pauseOnHover: true,
 
       breakpoints: {

@@ -8,8 +8,8 @@
 
    h3 {
       font-family: 'AsherPunk';
-      font-size: 5.5rem;
-      color: #43badf;
+      font-size: clamp(2rem, 5vw + 1rem, 5.5rem);
+      color: $secondary;
    }
 
    .carousel_container {
@@ -18,8 +18,8 @@
       gap: 1rem;
       width: 60%;
       padding: 2rem 0;
-      border: 2px solid #cf3284;
-      box-shadow: 5px 0px 30px #cf3284;
+      border: 2.5px solid $primary;
+      box-shadow: 5px 0px 30px $primary;
       border-radius: 1.5rem;
 
       p {
