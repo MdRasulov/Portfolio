@@ -2,13 +2,25 @@
 
 @keyframes neon {
    0% {
-      box-shadow: 0 0 20px $secondary;
+      box-shadow: 0 0 10px $secondary;
    }
    50% {
-      box-shadow: 5px 5px 30px $secondary;
+      box-shadow: 2px 2px 30px $secondary;
    }
    100% {
-      box-shadow: 0 0 20px $secondary;
+      box-shadow: 0 0 10px $secondary;
+   }
+}
+
+@keyframes welcomeNeon {
+   0% {
+      box-shadow: 0px 0px 15px $primary;
+   }
+   50% {
+      box-shadow: 0px 0px 40px $primary;
+   }
+   100% {
+      box-shadow: 0px 0px 15px $primary;
    }
 }
 
@@ -33,18 +45,23 @@
          font-family: 'AsherPunk';
          font-size: clamp(0.5rem, 1vw + 0.3rem, 1rem);
          color: $primary;
-         border: 1px solid $primary;
-         box-shadow: 3px 5px 30px $primary;
+         border: 2px solid $primary;
          border-radius: 0.7rem;
+         animation: welcomeNeon 5s linear infinite;
       }
 
       .typing_text {
          font-size: clamp(1rem, 3vw + 0.5rem, 2rem);
          color: $secondary;
+
+         .name {
+            color: $primary;
+         }
       }
 
       .description {
-         font-size: 0.8rem;
+         font-size: 1.2rem;
+         font-family: 'Space Mono', monospace;
          color: #aeb7c4;
          line-height: 115%;
       }
@@ -94,7 +111,7 @@
       height: 200%;
       box-shadow: 0 0 20px $secondary;
       border-right: 3.5px solid $secondary;
-      animation: neon 5s ease infinite;
+      animation: neon 5s linear infinite;
    }
 }
 
@@ -148,7 +165,7 @@
             padding: 0.5rem;
          }
          .description {
-            font-size: 0.55rem;
+            font-size: 0.75rem;
          }
       }
    }
@@ -159,12 +176,12 @@
       .intro {
          gap: 1rem;
 
-         .contact_link {
-            display: none;
+         .description {
+            font-size: 0.65rem;
          }
 
-         .description {
-            font-size: 0.5rem;
+         .contact_link {
+            display: none;
          }
       }
    }

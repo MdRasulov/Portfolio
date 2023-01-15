@@ -58,14 +58,24 @@
    @media screen and (max-width: 720px) {
       .carousel_container {
          gap: 0.5rem;
+         p {
+            font-size: 0.65rem;
+         }
       }
    }
    @media screen and (max-width: 480px) {
-      .slide {
-         gap: 0.2rem;
-      }
-      .slide__name {
-         font-size: 0.7rem;
+      .carousel_container {
+         p {
+            font-size: 0.55rem;
+         }
+
+         .slide {
+            gap: 0.2rem;
+
+            .slide__name {
+               font-size: 0.6rem;
+            }
+         }
       }
    }
 }

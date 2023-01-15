@@ -13,7 +13,9 @@ const Hero = () => {
                <h1>Welcome to my Portfolio</h1>
             </div>
             <div className='typing_text'>
-               <p>Hello! I'm Makhmud,</p>
+               <p>
+                  Hello! <span className='name'>I'm Makhmud,</span>
+               </p>
                <Typed
                   strings={['Web Developer 💻', 'I like coding 💖']}
                   typeSpeed={150}
@@ -25,9 +27,8 @@ const Hero = () => {
             </div>
             <div className='description'>
                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime qui amet
-                  aperiam quibusdam culpa sit incidunt ut saepe nihil minus non impedit
-                  eius repellat aut, fugit optio modi officia illum!
+                  Hi! 👋 My name is Makhmud and I'm passionate about creating beautiful
+                  and performant web applications.
                </p>
             </div>
             <div className='contact_link'>
