@@ -17,9 +17,9 @@ const Hero = ({ setDarkMode, darkMode }) => {
                   }}
                >
                   {darkMode ? (
-                     <img src={darkModeIcon} alt='' />
-                  ) : (
                      <img src={lightModeIcon} alt='' />
+                  ) : (
+                     <img src={darkModeIcon} alt='' />
                   )}
                </button>
                <div className='welocome'>
