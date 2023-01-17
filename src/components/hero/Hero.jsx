@@ -1,16 +1,30 @@
-import React from 'react';
 import { HashLink as Link } from 'react-router-hash-link';
 import Typed from 'react-typed';
 import 'react-typed/dist/animatedCursor.css';
 import bannerImg from '../../assets/images/banner.png';
+import darkModeIcon from '../../assets/images/dark_mode.png';
+import lightModeIcon from '../../assets/images/light_mode.png';
 import './hero.scss';
 
-const Hero = () => {
+const Hero = ({ setDarkMode, darkMode }) => {
    return (
       <div className='hero'>
          <div className='intro'>
-            <div className='welocome'>
-               <h1>Welcome to my Portfolio</h1>
+            <div className='intro_header'>
+               <button
+                  onClick={() => {
+                     setDarkMode(!darkMode);
+                  }}
+               >
+                  {darkMode ? (
+                     <img src={darkModeIcon} alt='' />
+                  ) : (
+                     <img src={lightModeIcon} alt='' />
+                  )}
+               </button>
+               <div className='welocome'>
+                  <h1>Welcome to my Portfolio</h1>
+               </div>
             </div>
             <div className='typing_text'>
                <p>
@@ -35,7 +49,9 @@ const Hero = () => {
                <Link to='#contact_section'>Contact me</Link>
             </div>
          </div>
-         <div className='banner_image'></div>
+         <div className='banner_image'>
+            <img src={bannerImg} alt='' />
+         </div>
       </div>
    );
 };

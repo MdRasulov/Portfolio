@@ -2,32 +2,32 @@
 
 @keyframes neon {
    0% {
-      box-shadow: 0 0 10px $secondary;
+      box-shadow: 0 0 10px var(--font-secondary);
    }
    50% {
-      box-shadow: 2px 2px 30px $secondary;
+      box-shadow: 2px 2px 30px var(--font-secondary);
    }
    100% {
-      box-shadow: 0 0 10px $secondary;
+      box-shadow: 0 0 10px var(--font-secondary);
    }
 }
 
 @keyframes welcomeNeon {
    0% {
-      box-shadow: 0px 0px 15px $primary;
+      box-shadow: 0px 0px 15px var(--font-primary);
    }
    50% {
-      box-shadow: 0px 0px 40px $primary;
+      box-shadow: 0px 0px 40px var(--font-primary);
    }
    100% {
-      box-shadow: 0px 0px 15px $primary;
+      box-shadow: 0px 0px 15px var(--font-primary);
    }
 }
 
 .hero {
    height: 100vh;
-   background-color: #061122;
    display: flex;
+   position: relative;
 
    .intro {
       width: 40%;
@@ -38,47 +38,66 @@
       justify-content: center;
       gap: 4rem;
 
-      .welocome {
-         width: fit-content;
-         padding: 1rem;
-         font-weight: 600;
-         font-family: 'AsherPunk';
-         font-size: clamp(0.5rem, 1vw + 0.3rem, 1rem);
-         color: $primary;
-         border: 2px solid $primary;
-         border-radius: 0.7rem;
-         animation: welcomeNeon 5s linear infinite;
+      .intro_header {
+         button {
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            border: none;
+            background: none;
+            width: 3rem;
+            height: 3rem;
+            cursor: pointer;
+            outline: none;
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+
+         .welocome {
+            width: fit-content;
+            padding: 1rem;
+            font-weight: 600;
+            font-family: 'AsherPunk';
+            font-size: clamp(0.5rem, 1vw + 0.3rem, 1rem);
+            color: var(--font-primary);
+            border: 2px solid var(--font-primary);
+            border-radius: 0.7rem;
+            animation: welcomeNeon 5s linear infinite;
+         }
       }
 
       .typing_text {
-         font-size: clamp(1rem, 3vw + 0.5rem, 2rem);
-         color: $secondary;
+         font-size: clamp(1rem, 2.5vw + 0.5rem, 2rem);
+         color: var(--font-secondary);
 
          .name {
-            color: $primary;
+            color: var(--font-primary);
          }
       }
 
       .description {
          font-size: 1.2rem;
          font-family: 'Space Mono', monospace;
-         color: #aeb7c4;
          line-height: 115%;
       }
 
       .contact_link {
          a {
             padding: 1rem;
-            background-color: $primary;
-            border: 1px solid $primary;
-            color: #061122;
+            background-color: var(--font-primary);
+            border: 1px solid var(--font-primary);
+            color: #ffffff;
             text-decoration: none;
             transition: all 0.4s ease;
          }
 
          a:hover {
             background-color: transparent;
-            color: $primary;
+            color: var(--font-primary);
          }
       }
    }
@@ -88,16 +107,13 @@
       height: 100%;
       overflow: hidden;
       position: relative;
-      background-image: url('../../assets/images/banner.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-color: var(--bg-color);
 
-      // img {
-      //    width: 100%;
-      //    height: 100%;
-      //    object-fit: cover;
-      // }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
    }
 
    .banner_image::before {
@@ -106,12 +122,12 @@
       left: -8rem;
       top: 50%;
       transform: translateY(-70%) rotate(20deg);
-      background: #061122;
+      background-color: var(--bg-color);
       width: 50%;
       height: 200%;
-      box-shadow: 0 0 20px $secondary;
-      border-right: 3.5px solid $secondary;
+      border-right: 3.5px solid var(--font-secondary);
       animation: neon 5s linear infinite;
+      transition: background-color 550ms ease-in-out;
    }
 }
 
@@ -120,13 +136,16 @@
       .banner_image {
          width: 40%;
       }
+      .banner_image::before {
+         transform: translateY(-60%) rotate(10deg);
+      }
    }
 }
 
 @media screen and (max-width: 850px) {
    .hero {
       display: block;
-      border-bottom: 3px solid $secondary;
+      border-bottom: 3px solid var(--font-secondary);
 
       .intro {
          width: 80%;
@@ -153,7 +172,7 @@
          transform: translateY(-50%) rotate(-20deg);
          width: 150%;
          height: 100%;
-         border-bottom: 3px solid $secondary;
+         border-bottom: 3px solid var(--font-secondary);
       }
    }
 }
@@ -161,8 +180,16 @@
 @media screen and (max-width: 480px) {
    .hero {
       .intro {
-         .welocome {
-            padding: 0.5rem;
+         .intro_header {
+            button {
+               top: 0.8rem;
+               left: 1rem;
+               width: 2.2rem;
+               height: 2.2rem;
+            }
+            .welocome {
+               padding: 0.5rem;
+            }
          }
          .description {
             font-size: 0.75rem;
@@ -175,6 +202,15 @@
    .hero {
       .intro {
          gap: 1rem;
+
+         .intro_header {
+            button {
+               top: 0.5rem;
+               left: 0.7rem;
+               width: 2rem;
+               height: 2rem;
+            }
+         }
 
          .description {
             font-size: 0.65rem;

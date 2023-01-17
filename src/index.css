@@ -10,6 +10,13 @@
    src: url('./assets/fonts/AsherPunk.ttf');
 }
 
+:root {
+   --primary: #e99f1e;
+   --secondary: #43badf;
+   --bg-dark: #061122;
+   --bg-light: #dcdbdb;
+}
+
 * {
    padding: 0;
    margin: 0;
@@ -17,15 +24,34 @@
    scroll-behavior: smooth;
 }
 
-html {
-   scroll-behavior: smooth;
-}
-
 body {
-   background-color: #061122;
    font-family: 'Mechanica', monospace, sans-serif;
    letter-spacing: 1.2px;
    color: #fff;
+}
+
+.dark {
+   --font-primary: var(--primary);
+   --font-secondary: var(--secondary);
+   --bg-color: var(--bg-dark);
+   --contrast: var(--bg-light);
+   transition: background 550ms ease-in-out, color 1000ms ease-in-out;
+}
+
+body .dark {
+   background: var(--bg-dark);
+}
+
+.light {
+   --font-primary: var(--secondary);
+   --font-secondary: var(--primary);
+   --bg-color: var(--bg-light);
+   --contrast: var(--bg-dark);
+   transition: background 550ms ease-in-out, color 1000ms ease-in-out;
+}
+
+body .light {
+   background: var(--bg-light);
 }
 
 /* ----------------scroll-bar---------------- */
