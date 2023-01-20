@@ -11,7 +11,7 @@ function Projects() {
             <div className='project__card'>
                <img src={messagerImg} alt='' />
                <div className='project__modal'>
-                  <p>WEB MESSANGER</p>
+                  <p>WEB MESSENGER</p>
                   <div className='links'>
                      <a
                         href='https://github.com/NinjaBubble/Web-Chat-App'
