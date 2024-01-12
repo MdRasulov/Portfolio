@@ -14,13 +14,13 @@ function Projects() {
                   <p>WEB MESSENGER</p>
                   <div className='links'>
                      <a
-                        href='https://github.com/NinjaBubble/Web-Chat-App'
+                        href='https://github.com/MdRasulov/Web-Chat-App'
                         target={'_blank'}
                      >
                         GITHUB
                      </a>
                      <a
-                        href='https://ninjabubble.github.io/Web-Chat-App/'
+                        href='https://mdrasulov.github.io/Web-Chat-App/'
                         target={'_blank'}
                      >
                         Life Demo
@@ -34,13 +34,13 @@ function Projects() {
                   <p>WEB GALLERY</p>
                   <div className='links'>
                      <a
-                        href='https://github.com/NinjaBubble/Simple-Gallery'
+                        href='https://github.com/MdRasulov/Simple-Gallery'
                         target={'_blank'}
                      >
                         GITHUB
                      </a>
                      <a
-                        href=' https://ninjabubble.github.io/Simple-Gallery/'
+                        href=' https://mdrasulov.github.io/Simple-Gallery/'
                         target={'_blank'}
                      >
                         Life Demo
